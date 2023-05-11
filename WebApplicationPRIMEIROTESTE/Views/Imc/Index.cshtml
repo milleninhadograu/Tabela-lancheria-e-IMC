@@ -1,0 +1,30 @@
+﻿<h1>Peso</h1>
+@Html.TextBox("peso")
+<h1>Altura</h1>
+<input id="Altura" type="text"/>
+<br />
+<button onclick="meubotao()">Veja...</button>
+@Html.ActionLink("Lancheria","Lancheria");
+
+
+<script> 
+    function meubotao(){
+        var Peso = Number(peso.value);
+        var altura = Number(Altura.value);
+
+        var imc = Peso / altura **2;
+        alert(imc);
+        if(imc > 30){
+            alert("Tu é gordo")
+        }
+        else if(imc > 24.9){
+            alert("Nivel Thais Carla")
+        }
+        if(imc >18.5){
+            alert("Peso Normal")
+        }
+        if(imc <18.5){
+            alert("Abaixo do Peso Tipo Millena")
+        }
+    }
+</script>
